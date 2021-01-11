@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import {init} from "bloch"
 
-const BlocPage = () => {
+const BlochPage = () => {
 
   useEffect(() => {
     init();
@@ -12,4 +12,4 @@ const BlocPage = () => {
   )
 }
 
-export default BlocPage
+export default BlochPage
