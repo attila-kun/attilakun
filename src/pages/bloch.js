@@ -12,6 +12,7 @@ fieldset {
   border: 1px solid #ddd;
 }
 
+#stateContainer > div + div,
 #matrixContainer > div + div {
   margin-top: 6px;
 }
