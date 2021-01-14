@@ -1,6 +1,14 @@
 import React, { useEffect } from "react"
 import {init} from "bloch"
 
+const darkTheme = `
+  html, body, input, textarea, select, button {
+    background-color: #17191a;
+    border-color: #6d6659;
+    color: #dcdbd8;
+  }
+`;
+
 const css = `
 body > div {
   display: grid;
@@ -42,6 +50,7 @@ const BlochPage = () => {
   return (
     <div>
       <div>
+        <style>{darkTheme}</style>
         <style>{css}</style>
         <fieldset id="stateContainer">
           <legend>Quantum state:</legend>
