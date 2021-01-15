@@ -22,7 +22,10 @@ export default () => {
         className="justify-content-end"
       >
         <Nav className="pr-3 mr-4 nav-links">
-          <Nav.Link className="ml-2" as={Link} to="/blog" title="Blog">
+          <Nav.Link className="ml-2" as={Link} to="/bloch" title="Bloch">
+            Bloch
+          </Nav.Link>
+          {/* <Nav.Link className="ml-2" as={Link} to="/blog" title="Blog">
             Blog
           </Nav.Link>
           <Nav.Link className="ml-2" as={Link} to="/about" title="About">
@@ -33,8 +36,8 @@ export default () => {
           </Nav.Link>
           <Nav.Link className="ml-2" as={Link} to="/resume" title="Resume">
             Resume
-          </Nav.Link>
-          <Form className="ml-3 my-auto">
+          </Nav.Link> */}
+          {/* <Form className="ml-3 my-auto">
             <Form.Check
               type="switch"
               id="custom-switch"
@@ -43,7 +46,7 @@ export default () => {
               checked={dark}
               onChange={toggleDark}
             />
-          </Form>
+          </Form> */}
         </Nav>
       </Navbar.Collapse>
     </Navbar>
