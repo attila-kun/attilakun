@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/attila-kun/attilakun/issues"
   },
-  "homepage": "https://github.com/attila-kun/attilakun#readme"
+  "homepage": "https://github.com/attila-kun/attilakun#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.1"
+  }
 }
