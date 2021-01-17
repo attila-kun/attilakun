@@ -6,7 +6,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.on('afterBuild', async () => {
     const filePath = "public/bloch/index.html";
     const html = await fs.readFile(filePath, "utf8");
-    await fs.writeFile(filePath, injectBlochHtml(html), "utf8");
+    await fs.writeFile(filePath, await injectBlochHtml(html), "utf8");
   });
   return {
     dir: {
@@ -16,7 +16,9 @@ module.exports = function(eleventyConfig) {
   };
 };
 
-function injectBlochHtml(html) {
+async function injectBlochHtml(html) {
+  const analytics = await fs.readFile("src/_includes/analytics.njk", "utf8");
+
   return html.replace("</head>", `
   <style>
     html, body, input, textarea, select, button {
@@ -36,6 +38,10 @@ function injectBlochHtml(html) {
       );
     };
   </script>
+  ${analytics}
   </head>
+    `).replace("<body>", `
+  <body>
+    <a href="/">Home2</a>
     `);
 }
