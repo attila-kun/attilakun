@@ -26,6 +26,16 @@ async function injectBlochHtml(html) {
       border-color: #6d6659;
       color: #dcdbd8;
     }
+
+    #nav {
+      margin: 18px 0 0 15px;
+    }
+
+    #nav a {
+      color: white;
+      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+      text-decoration: none;
+    }
   </style>
   <script src="bloch.js"></script>
   <script>
@@ -42,6 +52,8 @@ async function injectBlochHtml(html) {
   </head>
     `).replace("<body>", `
   <body>
-    <a href="/">Home2</a>
+    <div id="nav">
+      <a href="/">Home</a>
+    </div>
     `);
 }
