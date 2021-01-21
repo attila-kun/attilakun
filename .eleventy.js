@@ -40,12 +40,20 @@ async function injectBlochHtml(html) {
   <script src="bloch.js"></script>
   <script>
     window.onload = function() {
-      bloch.init(
+      var blochInstance = bloch.init(
         document.getElementById("stateContainer"),
         document.getElementById("matrixContainer"),
         document.getElementById("canvasContainer"),
         document.getElementById("buttonContainer"),
       );
+
+      function resizeCanvas() {
+        var canvasContainer = document.getElementById("canvasContainer");
+        blochInstance.resizeCanvas(canvasContainer.clientHeight);
+      }
+
+      window.onresize = resizeCanvas;
+      resizeCanvas();
     };
   </script>
   ${analytics}
