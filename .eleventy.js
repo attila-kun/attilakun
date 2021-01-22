@@ -48,8 +48,22 @@ async function injectBlochHtml(html) {
       );
 
       function resizeCanvas() {
-        var canvasContainer = document.getElementById("canvasContainer");
-        blochInstance.resizeCanvas(canvasContainer.clientHeight);
+        var container = document.getElementById("container");
+        var settings = document.getElementById("settings");
+        var canvasRoot = document.getElementById("canvasRoot");
+
+        var containerRect = container.getBoundingClientRect();
+        var settingsRect = settings.getBoundingClientRect();
+        var canvasRootRect = canvasRoot.getBoundingClientRect();
+
+        if (settingsRect.top < canvasRootRect.top) { // wrapped
+          canvasRoot.style.height = String(containerRect.height - settingsRect.height) + 'px';
+        } else { // not wrapped, settings and canvas are next to each other
+          canvasRoot.style.height = null;
+        }
+
+        var size = Math.min(canvasRoot.clientWidth, canvasRoot.clientHeight);
+        blochInstance.resizeCanvas(size);
       }
 
       window.onresize = resizeCanvas;
