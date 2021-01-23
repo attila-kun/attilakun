@@ -28,7 +28,7 @@ async function injectBlochHtml(html) {
     }
 
     #nav {
-      margin: 18px 0 0 15px;
+      margin: 18px 0 15px 15px;
     }
 
     #nav a {
@@ -75,7 +75,7 @@ async function injectBlochHtml(html) {
     `).replace("<body>", `
   <body>
     <div id="nav">
-      <a href="/">Home</a>
+      <a href="/">◀ Go back</a>
     </div>
     `);
 }
