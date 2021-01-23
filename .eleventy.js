@@ -35,6 +35,11 @@ async function injectBlochHtml(html) {
       color: white;
       font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
       text-decoration: none;
+      margin: 0 30px;
+    }
+
+    #nav a:first-child {
+      margin: 0;
     }
 
     #github-fork {
@@ -82,6 +87,7 @@ async function injectBlochHtml(html) {
   <body>
     <div id="nav">
       <a href="/">◀ Go back</a>
+      <a href="https://quantumcomputing.stackexchange.com/a/15655/12643">🤔 What is this?</a>
     </div>
     <a id="github-fork" href="https://github.com/attila-kun/bloch">
       <img loading="lazy" width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_white_ffffff.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1">
