@@ -1,6 +1,7 @@
 const fs = require('fs').promises;
 
 module.exports = function(eleventyConfig) {
+  eleventyConfig.addPassthroughCopy({"static": "/"});
   eleventyConfig.addPassthroughCopy({"node_modules/bloch/dist/lib.js": "bloch/bloch.js"});
   eleventyConfig.addPassthroughCopy({"node_modules/bloch/src/index.html": "bloch/index.html"});
   eleventyConfig.on('afterBuild', async () => {
